@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "noEmit": true,
+    "module": "ESNext",
+    "strict": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/ui/*": ["client/src/components/ui/*"],  // This is correct if components are under client/src
+      "@/lib/*": ["client/src/lib/*"],  // Same here
+      "@/hooks/*": ["client/src/hooks/*"]  // Same here
+    }
+  },
+  "include": [
+    "/client/src/**/*",  // Ensure this is correct
+    "/shared/**/*",
+    "/server/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "**/*.test.ts"
+  ]
+}
